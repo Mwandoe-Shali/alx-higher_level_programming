@@ -40,4 +40,6 @@
 | 8. Create a new sentence | [8-concat_edges.py](./8-concat_edges.py) |
 | 9. Easter Egg | [9-easter_egg.py](./9-easter_egg.py) |
 | 10. Linked list cycle | [10-check_cycle.c](./10-check_cycle.c), [lists.h](./lists.h) |
-
+| 11. Hello, write | [100-write.py](./100-write.py) |
+| 12. Compile | [101-compile](./101-compile) |
+| 13. ByteCode -> Python #1 | [102-magic_calculation.py](./102-magic_calculation.py) |
