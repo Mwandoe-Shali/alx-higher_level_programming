@@ -8,7 +8,7 @@
  * Description: This function inserts a new node with the specified number into
  * a sorted singly-linked list while maintaining the sorting order.
  *
- * Return: If the function fails to allocate memory for the new node, it returns NULL.
+ * Return: If function fails to allocate memory for new node, returns NULL.
  *         Otherwise, it returns a pointer to the new node.
  */
 listint_t *insert_node(listint_t **head, int number)
@@ -23,7 +23,7 @@ listint_t *insert_node(listint_t **head, int number)
 	/* Set the value of the new node to the specified number */
 	new->n = number;
 
-	/* Handle cases where the list is empty or the new node should be inserted at the beginning */
+	/* Handle where list is empty or new node inserted at the beginning */
 	if (node == NULL || node->n >= number)
 	{
 		new->next = node;
