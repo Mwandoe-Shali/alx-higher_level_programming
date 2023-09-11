@@ -10,6 +10,6 @@ def print_matrix_integer(matrix=[[]]):
                 print('{}'.format(col), end='')
             else:
                 # If col is last element in row, print with a trailing space
-                print("{}".format(col), end='  ')
+                print("{}".format(col), end=' ')
         # Move to the next row after printing all columns
         print()
