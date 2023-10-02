@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a square with a size attribute """
 
+
 class Square:
 
     def __init__(self, size=0, position=(0, 0)):
@@ -11,7 +12,6 @@ class Square:
         """
         self.__size = size
         self.position = position
-
 
     @property
     def size(self):
@@ -34,7 +34,7 @@ class Square:
     @position.setter
     def position(self, value):
         """set the position of this Square
-        Args: 
+        Args:
             Value as a tuple of two positive integers
         Raises:
             TypeError: if value is not a tuple or any int in tuple < 0
