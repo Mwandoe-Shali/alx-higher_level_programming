@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines a square with a size attribute"""
 
+
 class Square:
     """square class with size attribute
 
