@@ -5,6 +5,7 @@ The 0-add_integer module takes two integers or floats as arguments and returns t
 
 Usage
 =====
+SUCCESS CASES:
 
 Importing function from the module:
     >>> add_integer = __import__('0-add_integer').add_integer
@@ -40,6 +41,8 @@ Adding a positive float and a negative integer (a = 10.5 and b = -2)
 Adding two negative floats (a = -10.5 and b = -2)
 	    >>> add_integer(-10.5, -2)
 	    -12
+
+FAILED CASES:
 
 Adding an integer number and a string (a = 4 and b = "School")
     >>> add_integer(4, "School")
@@ -77,7 +80,7 @@ Adding a number and a list
 	      ...
     TypeError: b must be an integer
 
-Passing a only one string
+Passing only one string as an argument
     >>> add_integer("Hello")
     Traceback (most recent call last):
 	      ...
@@ -87,7 +90,7 @@ Adding two float numbers (a = 1.2 and b = 4.2)
     >>> add_integer(1.2, 4.2)
     5
 
-Case Overflow:
+CASE OVERFLOWS:
 
     >>> add_integer(float('inf'), 0)
     Traceback (most recent call last):
