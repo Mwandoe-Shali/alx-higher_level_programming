@@ -1,4 +1,4 @@
-he 1-my_list module
+The 1-my_list module
 ====================
 
 Using ``print_sorted``
@@ -35,6 +35,17 @@ Now Testing:
 	[False, False, True, True]
 
 ***********************************************
+
+	Test_Case 3: not defined object
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list2.print_sorted()
+	Traceback (most recent call last):
+	 ...
+	NameError: name 'my_list2' is not defined
+	>>>
+***********************************************
+
 Testing for module docstring:
     >>> m = __import__("1-my_list").__doc__
     >>> len(m) > 1
