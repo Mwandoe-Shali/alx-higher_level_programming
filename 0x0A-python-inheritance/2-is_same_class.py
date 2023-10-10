@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module 2-is_same_class
-This module defines the is_same_class function that 
+This module defines the is_same_class function that
 checks if an object is exactly an instance of a specified class.
 """
 
