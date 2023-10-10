@@ -4,6 +4,7 @@ Module: 12-pascal_triangle
 Defines a function to generate Pascal's triangle.
 """
 
+
 def pascal_triangle(n):
     """
     Generates Pascal's triangle of n.
