@@ -28,7 +28,8 @@ class Student:
         Returns the dictionary representation of the Student instance.
 
         Args:
-            attrs (list): A list of attribute names to include in the dictionary representation.
+            attrs (list): A list of attribute names to include
+                            in the dictionary representation.
 
         Returns:
             dict: The dictionary representation of the Student instance.
@@ -36,7 +37,8 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            return {attr: getattr(self, attr) for attr in attrs
+                    if hasattr(self, attr)}
 
     def reload_from_json(self, json):
         """
