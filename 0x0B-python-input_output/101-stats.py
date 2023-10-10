@@ -3,8 +3,8 @@
 Module: 101-stats
 Reads stdin line by line and computes metrics.
 """
-
 import sys
+
 
 def print_metrics(total_size, status_codes):
     """
@@ -12,12 +12,14 @@ def print_metrics(total_size, status_codes):
 
     Args:
         total_size (int): The total file size.
-        status_codes (dict): A dictionary containing the count of each status code.
+        status_codes (dict): A dictionary containing the count of each
+                                status code.
     """
     print("File size: {}".format(total_size))
     for code in sorted(status_codes.keys()):
         if status_codes[code] > 0:
             print("{}: {}".format(code, status_codes[code]))
+
 
 def parse_line(line):
     """
@@ -33,6 +35,7 @@ def parse_line(line):
     size = int(parts[-1])
     code = parts[-2]
     return size, code
+
 
 def main():
     """
@@ -65,6 +68,7 @@ def main():
     except KeyboardInterrupt:
         print_metrics(total_size, status_codes)
         raise
+
 
 if __name__ == "__main__":
     main()
