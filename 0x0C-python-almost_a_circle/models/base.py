@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 Module Base
 Super class
 """
@@ -18,7 +18,8 @@ class Base:
         Initializes a Base object.
 
         Args:
-            id (int): The id value for the object. If None, a unique id will be assigned.
+            id (int): The id value for the object.
+                        If None, a unique id will be assigned.
         """
         if id is not None:
             self.id = id
@@ -26,22 +27,21 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """
         Returns the JSON string representation of list_dictionaries.
-    
+
         Args:
             list_dictionaries (list): A list of dictionaries.
-    
+
         Returns:
             str: The JSON string representation of list_dictionaries.
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -69,11 +69,11 @@ class Base:
             list: The list of instances from the JSON string representation.
         """
         if type(json_string) is not str:
-                raise TypeError("json_string must be a string")
+            raise TypeError("json_string must be a string")
         if json_string is None or len(json_string) == 0:
             return ("[]")
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """
@@ -94,7 +94,7 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """
