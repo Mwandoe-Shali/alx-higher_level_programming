@@ -17,7 +17,8 @@ class Rectangle(Base):
             height (int): The height of the rectangle.
             x (int): The x-coordinate of the rectangle's position.
             y (int): The y-coordinate of the rectangle's position.
-            id (int): The id value for the object. If None, a unique id will be assigned.
+            id (int): The id value for the object.
+                            If None, a unique id will be assigned.
         """
         super().__init__(id)
         self.width = width
@@ -29,19 +30,22 @@ class Rectangle(Base):
     def width(self):
         """Getter method for the width attribute. """
         return self.__width
+
     @property
     def height(self):
         """Getter method for the height attribute. """
         return self.__height
+
     @property
     def x(self):
         """Getter method for the x attribute. """
         return self.__x
+
     @property
     def y(self):
         """Getter method for the y attribute. """
         return self.__y
-    
+
     @width.setter
     def width(self, value):
         """Setter method for the width attribute.
@@ -58,29 +62,31 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
     @height.setter
     def height(self, value):
         """Setter method for the height attribute.
-         
+
         Args:
             value (int): The value to set as height
-            
+
         Raises:
             TypeError: If value is not an integer.
-            ValueError: If value is less than or equal to 0 
+            ValueError: If value is less than or equal to 0
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
     @x.setter
     def x(self, value):
         """Setter method for the x attribute.
 
         Args:
             value (int): The value to set as x-coordinate
-            
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0 """
@@ -89,13 +95,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
+
     @y.setter
     def y(self, value):
         """Setter method for the y attribute.
 
         Args:
             value (int): The value to set as y-coordinate
-            
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0 """
@@ -122,7 +129,7 @@ class Rectangle(Base):
         for _ in range(self.__y):
             print()
         for _ in range(self.__height):
-            print(" " * self.__x  + "#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """
@@ -131,14 +138,14 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
                                     {self.__width}/{self.__height}"
-    
+
     def update(self, *args, **kwargs):
         """
         Updates the attributes of the Rectangle instance.
 
         Args:
-            *args: Variable number of arguments in the order (id, width, height, x, y).
-            **kwargs: Variable number of keyword arguments representing attribute-value pairs.
+            *args: No. of arguments in order (id, width, height, x, y).
+            **kwargs: No. of keyword args showing attribute-value pairs.
         """
         if args:
             attrs = ["id", "width", "height", "x", "y"]
