@@ -21,16 +21,16 @@ class Square(Rectangle):
             id (int): The id value for the object.
                             If None, a unique id will be assigned.
         """
-        super().__init__( size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
-    def __str__(self):    
+    def __str__(self):
         """
         Returns:
             str: A string representation of the Square instance in the format
                             [Square] (<id>) <x>/<y> - <size>.
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
-    
+
     @property
     def size(self):
         """
@@ -41,7 +41,6 @@ class Square(Rectangle):
         """
         return self.__width
 
-    
     @size.setter
     def size(self, value):
         """
@@ -93,6 +92,3 @@ class Square(Rectangle):
             'x': self.x,
             'y': self.y
         }
-
-
-
