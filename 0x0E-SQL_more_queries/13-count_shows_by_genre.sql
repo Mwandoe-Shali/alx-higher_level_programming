@@ -7,7 +7,7 @@
 -- You can use only one SELECT statement
 -- The database name will be passed as an argument of the mysql command
 
-SELECT tg.name AS genre
+SELECT tg.name AS genre,
         COUNT(*) AS number_of_shows
 FROM tv_genres AS tg
 INNER JOIN tv_show_genres AS tsg
