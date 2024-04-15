@@ -2,9 +2,9 @@
 """Fetches https://alx-intranet.hbtn.io/status."""
 import urllib.request
 
-url = 'https://alx-intranet.hbtn.io/status'
-
 if __name__ == "__main__" :
+    url = 'https://alx-intranet.hbtn.io/status'
+
     res = urllib.request.Request(url)
     with urllib.request.urlopen(res) as response:
         body = response.read()
